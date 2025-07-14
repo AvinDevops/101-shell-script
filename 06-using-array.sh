@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MOVIES=("Avengers" "Infinity war" "End game")
+MOVIES=("Avengers" "Infinity-war" "End-game")
 
 #for this array range is 3
 #array starts with index 0
