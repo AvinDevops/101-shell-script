@@ -42,7 +42,7 @@ fi
 
 for i in $@
 do
-    echo "Installing package is: $i"
+    echo -e "$Y Installing package is: $i $N"
     dnf list installed $i &>>LOGFILE
     if [ $? -eq 0 ]
     then
