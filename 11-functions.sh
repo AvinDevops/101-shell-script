@@ -17,14 +17,14 @@ VALIDATE(){
 
     if [ $1 -ne 0 ]
     then
-        echo "$2... is FAILED"
+        echo "$2....is FAILED"
         exit
     else
-        echo "$2... is SUCCESS"
+        echo "$2...is SUCCESS"
     fi
 }
 
-dnf install mysqll -y
+dnf install mysql -y
 VALIDATE $? "Installing mysql"
 
 
