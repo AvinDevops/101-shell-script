@@ -47,7 +47,6 @@ do
     if [ $? -eq 0 ]
     then
         echo -e "$G $i is already installed $N"
-        exit
     else
         echo "$R $i is not installed $N"
         dnf install $i -y &>>LOGFILE
