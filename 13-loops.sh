@@ -48,7 +48,7 @@ do
     then
         echo -e "$G $i is already installed $N"
     else
-        echo "$R $i is not installed $N"
+        echo -e "$R $i is not installed $N"
         dnf install $i -y &>>LOGFILE
         VALIDATE $? "Installing $i"
     fi
