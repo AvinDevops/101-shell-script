@@ -15,7 +15,7 @@ else
     exit
 fi
 
-FILES=$(find . -name)
+FILES=$(find .)
 
 while IFS= read -r line
 do 
