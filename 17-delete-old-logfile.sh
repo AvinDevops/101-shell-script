@@ -12,11 +12,13 @@ then
     echo -e "$G DIR $SOURCE_DIR exists $N"
 else
     echo -e "$R DIR $SOURCE_DIR does not exist $N"
+    exit
 fi
 
+FILES=$(find . -name)
 
 while IFS= read -r line
 do 
     echo "file to delete is: $line"
 
-done <<< $SOURCE_DIR
+done <<< $FILES
