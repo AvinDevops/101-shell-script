@@ -15,7 +15,7 @@ else
 fi
 
 
-while IFS=read -r line
+while IFS= read -r line
 do 
     echo "file to delete is: $line"
 
