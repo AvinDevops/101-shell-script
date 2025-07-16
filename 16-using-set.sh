@@ -2,6 +2,15 @@
 
 set -e
 
+error_catch(){
+
+    echo "Error at line no: $1"
+    echo "Error command desc: $2"
+
+}
+
+trap ' error_catch ${LINENO} "$BASH_COMMAND"' ERR
+
 USERID=$(id -u)
 
 if [ $USERID -ne 0 ]
