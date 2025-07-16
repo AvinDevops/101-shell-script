@@ -16,4 +16,4 @@ do
 
 done <<< $DISK_SPACE
 
-echo -e "$MESSAGE"
+echo  "Message:$MESSAGE"
