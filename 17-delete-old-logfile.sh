@@ -15,7 +15,7 @@ else
     exit
 fi
 
-FILES=$(find $SOURCE_DIR)
+FILES=$(find $SOURCE_DIR -name "*.log" -mtime +14)
 
 while IFS= read -r line
 do 
