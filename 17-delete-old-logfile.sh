@@ -19,4 +19,4 @@ while IFS= read -r line
 do 
     echo "file to delete is: $line"
 
-done <<< $SOURCE
+done <<< $SOURCE_DIR
