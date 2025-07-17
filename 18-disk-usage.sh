@@ -16,6 +16,4 @@ do
 
 done <<< $DISK_SPACE
 
-echo -e "Message:$MESSAGE"
-
-echo "$MESSAGE" | mail -s "DISK USEAGE" avinashbandela25@gmail.com
+echo -e "Message:$MESSAGE" | mail -s "DISK USEAGE" avinashbandela25@gmail.com
