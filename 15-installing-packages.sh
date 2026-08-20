@@ -12,5 +12,5 @@ fi
 
 for i in $@
 do
-    echo $@
+    echo $i
 done
