@@ -18,14 +18,27 @@ else
     echo -e "$G you are root user $N"
 fi
 
+VALIDATE(){
+    if [ $1 -ne 0 ]
+    then 
+        echo -e "$2 is...$R FAILED $N"
+        exit
+    else
+        echo -e "$2 is...$G SUCCESS $N"
+    fi
+}
+
+
 for i in $@
 do
-    echo $i
+    echo "package to install $i"
     dnf list installed $i &>>$LOGFILE
     if [ $? -eq 0 ]
     then
-        echo -e "$i is installed...$Y SKIPPING $N"
+        echo -e "$i $Y is installed...SKIPPING $N"
     else
-        echo -e "$i is not $R installed $N"
+        # echo -e "$i $R is not installed $N"
+        dnf install $i -y &>>$LOGFILE
+        VALIDATE $? "Installing $i"
     fi
 done
