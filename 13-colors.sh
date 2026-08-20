@@ -25,7 +25,7 @@ VALIDATE(){
         echo -e "$2 is...$R FAILED $N"
         exit
     else
-        echo -e "$2 is...$G SUCCESS $Y"
+        echo -e "$2 is...$G SUCCESS $N"
     fi
 }
 
@@ -36,4 +36,4 @@ dnf install git -y &>>$LOGFILE
 VALIDATE $? "Installing git"
 
 dnf install dockerr -y &>>$LOGFILE
-VALIDATE $? "Installing git"
+VALIDATE $? "Installing docker"
