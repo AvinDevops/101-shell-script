@@ -13,4 +13,11 @@ fi
 for i in $@
 do
     echo $i
+    dnf list installed $i
+    if [ $? -eq 0 ]
+    then
+        echo "$i is installed...SKIPPING"
+    else
+        echo "$i is not installed"
+    fi
 done
