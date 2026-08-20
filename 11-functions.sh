@@ -9,9 +9,18 @@ else
     echo "you are root user"
 fi
 
+# VALIDATE(){
+#     echo "exit status: $1"
+#     echo "What are you doing: $2"
+# }
 VALIDATE(){
-    echo "exit status: $1"
-    echo "What are you doing: $2"
+    if [ $1 -ne 0 ]
+    then
+        echo "$2...FAILED"
+        exit
+    else
+        echo "$2...SUCCESS"
+    fi
 }
 
 dnf install mysql -y
