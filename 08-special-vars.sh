@@ -7,3 +7,5 @@ echo "Current username: $USER"
 echo "Current working dir: $PWD"
 echo "Current hostname: $HOSTNAME"
 echo "process id of current shell script: $$"
+sleep 60 &
+echo "process id of last background command: $!"
