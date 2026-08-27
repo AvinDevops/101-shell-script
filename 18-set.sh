@@ -1,6 +1,12 @@
 #!/bin/bash
 set -e
 
+error_handler(){
+    echo "error line no: $1 and error desc: $2"
+}
+
+trap 'error_handler ${LINENO} "$BASH_COMMAND"' ERR
+
 R="\e[31m"
 G="\e[32m"
 N="\e[0m"
