@@ -7,6 +7,7 @@ then
     echo "source dir:$SOURCE_DIR exists"
 else
     echo "source dir:$SOURCE_DIR does not exists, please create it"
+    exit
 fi
 
 FILES=$(find $SOURCE_DIR -name "*.log" -mtime +14)
