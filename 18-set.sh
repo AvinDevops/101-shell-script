@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 R="\e[31m"
 G="\e[32m"
@@ -10,7 +11,7 @@ then
     echo -e "$R you are not super user, please access with super user $N"
     exit 1
 else
-    echo -e "$R you are super user $N"
+    echo -e "$G you are super user $N"
 fi
 
 dnf install mysqllll -y
