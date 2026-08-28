@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DISK_USEAGE=$(df -hT | grep xfs)
-DISK_THRESHOLD=5
+DISK_THRESHOLD=6
 
 # echo "disk_useage is: $DISK_USEAGE"
 
