@@ -3,6 +3,8 @@
 DISK_USEAGE=$(df -hT | grep xfs)
 DISK_THRESHOLD=6
 
+echo "disk_useage is: $DISK_USEAGE"
+
 while IFS= read -r line
 do 
     USEAGE=$(echo $line | awk -F " " '{print $6F}' | cut -d "%" -f1)
