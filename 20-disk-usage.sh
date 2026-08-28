@@ -17,4 +17,4 @@ do
     fi
 done <<<$DISK_USEAGE
 
-echo  -e $MESSAGE
+echo  -e "Msg:$MESSAGE"
