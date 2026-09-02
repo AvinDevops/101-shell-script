@@ -2,7 +2,7 @@
 
 DISK_USEAGE=$(df -hT | grep xfs)
 DISK_THRESHOLD=6
-
+MESSAGE=""
 # echo "disk_useage is: $DISK_USEAGE"
 
 while IFS= read -r line
